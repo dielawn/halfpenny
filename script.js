@@ -72,9 +72,9 @@ function SuperElement(parent, type, content, className, id) {
 SuperElement(containerDiv, 'div', '', 'navDiv', 'navDiv')
 const navDiv = document.getElementById('navDiv')
 
-SuperElement(navDiv, 'img', '', 'icon', 'pawIcon')
-const pawIcon = document.getElementById('pawIcon')
-pawIcon.src = 'images/pets_FILL0_wght400_GRAD0_opsz48.png'
+SuperElement(navDiv, 'img', '', 'icon', 'treesIcon')
+const treesIcon = document.getElementById('treesIcon')
+treesIcon.src = 'images/forest_FILL0_wght400_GRAD0_opsz48.png'
 
 SuperElement(navDiv, 'h1', 'Jim Halfpenny', 'navTitle', 'navTitle')
 
@@ -107,6 +107,20 @@ leafIcon.src = 'images/eco_FILL0_wght400_GRAD0_opsz48.png'
 SuperElement(transitionDiv, 'h4', 'M.S. 1970 Botany & Ecology University of Wyoming', 'transitionTxt', 'mastersTxt')
 SuperElement(transitionDiv, 'h4', "Currently Jim is President of A Naturalist's World, an ecological education company.", 'transitionTxt', 'naturalistTxt')
 
+SuperElement(containerDiv, 'div', '', 'naturalistWrldDiv', 'naturalistWrldDiv' )
+const naturalistWrldDiv = document.getElementById('naturalistWrldDiv')
+SuperElement(naturalistWrldDiv, 'h1', "A Naturalist's World", 'headerTxt', '')
+const naturalistWrldDescTxt = `Thank you for visiting our field class listing and product information site. A Naturalist's World is dedicated to providing educational programs and materials about natural history and ecology.Classes include tracking, carnivore ecology, wildlife observation, rare species, northern lights, and alpine and winter ecology. Instructional programs vary from 1 day to 2 weeks. Programs provided at locations across North America. Special Events and Offerings are listed below.For other materials and to register for classes go to the top of this page, select a topic, and visit the new page to view offerings.A Naturalist's World is permitted operator in Yellowstone National Park Authorized Permittee of the Yellowstone National Park`
+SuperElement(naturalistWrldDiv, 'p', naturalistWrldDescTxt, 'naturalistWrldDescTxt', 'naturalistWrldDescTxt')
+
+
+
+SuperElement(containerDiv, 'div', '', 'headerDiv', 'bookHeaderDiv')
+const bookHeaderDiv = document.getElementById('bookHeaderDiv')
+// SuperElement(bookHeaderDiv, 'img', '', 'icon', 'pawIcon')
+// const pawIcon = document.getElementById('pawIcon')
+// pawIcon.src = 'images/pets_FILL0_wght400_GRAD0_opsz48.png'
+SuperElement(bookHeaderDiv, 'h2', 'Books', 'headerTxt', 'booksHeader')
 
 SuperElement(containerDiv, 'div', '', 'bookDiv', 'bookDiv')
 const bookDiv = document.getElementById('bookDiv')
@@ -129,14 +143,9 @@ const renderBookCards = () => {
         if(book.imgCredit != null) {
             SuperElement(cardDiv, 'p', `Illustrations by ${book.imgCredit}`, 'imgCreditTxt', '')
         }
-        
-
-        
-       
-        
    })
 }
 renderBookCards()
-// SuperElement(transitionDiv, 'img', '', 'icon', 'treesIcon')
-// const treesIcon = document.getElementById('treesIcon')
-// treesIcon.src = 'images/forest_FILL0_wght400_GRAD0_opsz48.png'
+
+
+
