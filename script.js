@@ -1,4 +1,4 @@
-const bio = `Jim is an author, scientist, educator whose interest in COLD (altitudinal, latitudinal, and seasonal) has taken him to all seven continents and Greenland. Jim's specialities include environmental ecology, animal tracking, and carnivores; his greatest academic love, bears, led to 20 years studying black, grizzly and polar bears. He also works with wolverine, lynx, cougar and wolves. Jim has written over 25 books and videos including his latest, Yellowstone Bears in the Wild and Track Plates for Mammals. He led the American East Greenland expeditions in 1975 and 1976 and is a Fellow of the Explorer's Club and received the Antarctic Service medal. Jim is past Chairman of the Board of Directors, senior instructor, and administrative liason officer of the National Outdoor Leadership School. Currently Jim is President of A Naturalist's World, an ecological education company. A past Research Fellow of the Institute of Arctic and Alpine Research, Jim was Director of the Mountain Research Station and the Long-Term Ecological Research program in the Alpine. He is listed in Who's Who in the World 1989-1993, Who's Who in Emerging Leaders 1989-1996, Who's Who in Western America 1987-1997 and Who's Who In Science. A Vietnam veteran, Jim received the Navy Achievement Medal with Combat "V" and Vietnamese Gallantry Cross with Palm. Jim received his Ph.D. in 1980 in Biology, Ecology, & Mammalogy from the University of Colorado. His B.S. in 1969 and M.S. in 1970 both in Botany & Ecology from the University of Wyoming. At the University of Wyoming, Jim was on the President's Academic Honor Roll, University of Wyoming and a four-year letterman in diving, swimming and water polo.`
+const bio = `Jim is an author, scientist, educator whose interest in COLD (altitudinal, latitudinal, and seasonal) has taken him to all seven continents and Greenland. Jim's specialities include environmental ecology, animal tracking, and carnivores; his greatest academic love, bears, led to 20 years studying black, grizzly and polar bears. He also works with wolverine, lynx, cougar and wolves. Jim has written over 25 books and videos including his latest, Yellowstone Bears in the Wild and Track Plates for Mammals. He led the American East Greenland expeditions in 1975 and 1976 and is a Fellow of the Explorer's Club and received the Antarctic Service medal. Jim is past Chairman of the Board of Directors, senior instructor, and administrative liason officer of the National Outdoor Leadership School. Jim is President of A Naturalist's World, an ecological education company. A past Research Fellow of the Institute of Arctic and Alpine Research, Jim was Director of the Mountain Research Station and the Long-Term Ecological Research program in the Alpine. He is listed in Who's Who in the World 1989-1993, Who's Who in Emerging Leaders 1989-1996, Who's Who in Western America 1987-1997 and Who's Who In Science. A Vietnam veteran, Jim received the Navy Achievement Medal with Combat "V" and Vietnamese Gallantry Cross with Palm. Jim received his Ph.D. in 1980 in Biology, Ecology, & Mammalogy from the University of Colorado. His B.S. in 1969 and M.S. in 1970 both in Botany & Ecology from the University of Wyoming. At the University of Wyoming, Jim was on the President's Academic Honor Roll, University of Wyoming and a four-year letterman in diving, swimming and water polo.`
 
 const books = [
     {
@@ -6,7 +6,7 @@ const books = [
         authors: ["James Halfpenny"],
         imgCredit: "Elizabeth Biesiot",
         year: '1986',
-        img: 'images/mammalTrackingBk.jpeg',
+        img: 'images/tracking-mammal.jpg',
         desc: "Currently out of print and a collector's item.",
         id: 'mammalTracking',
     },
@@ -33,7 +33,7 @@ const books = [
         authors: authors = ["James Halfpenny, Ph.D.", "Darren S. Ireland", "Lara N. Bonn", "Diann Thompson, BSN"],
         imgCredit: null,
         year: '1994',
-        img: 'images/trackers-padBk.jpeg',
+        img: 'images/tracking-canids.jpg',
         desc: 'Database of footprints from red foxes, coyotes, wolves and many dog breeds.',
         id: 'trackingCanids',
     },
@@ -42,7 +42,7 @@ const books = [
         authors: authors = ["James Halfpenny, Ph.D.", "Darren S. Ireland", "Lara N. Bonn", "Diann Thompson, BSN"],
         imgCredit: null,
         year: '1997 & 2007',
-        img: 'images/tracking-cougarsBk.jpeg',
+        img: 'images/tracking-cougars.jpg',
         desc: "Jim's slide show made into a book.",
         id: 'trackingCougars',
     },
@@ -60,7 +60,7 @@ const books = [
 const containerDiv = document.getElementById('container')
 function SuperElement(parent, type, content, className, id) {
     this.el = document.createElement(type)
-    this.el.innerText = content
+    this.el.innerHTML = content
     this.el.classList.add(className)
     this.el.id = id
     parent.appendChild(this.el)
@@ -71,60 +71,49 @@ function SuperElement(parent, type, content, className, id) {
 
 SuperElement(containerDiv, 'div', '', 'navDiv', 'navDiv')
 const navDiv = document.getElementById('navDiv')
-
-SuperElement(navDiv, 'img', '', 'icon', 'treesIcon')
-const treesIcon = document.getElementById('treesIcon')
-treesIcon.src = 'images/forest_FILL0_wght400_GRAD0_opsz48.png'
-
+SuperElement(navDiv, 'span', 'forest', 'material-symbols-outlined', 'treesIcon')
 SuperElement(navDiv, 'h1', 'Jim Halfpenny', 'navTitle', 'navTitle')
-
 const navLinks = [ 'Home', 'Education', 'About']
-
 const createLinks = (array) => {
     array.map(item => {
         return new SuperElement(navDiv, 'h3', item, 'navLinks', item +'Link')
     })
 }
-
 createLinks(navLinks)
-
 SuperElement(containerDiv, 'div', '', 'bannerDiv', 'bannerDiv')
 const bannerDiv = document.getElementById('bannerDiv')
-
 SuperElement(bannerDiv, 'img', '', 'jimBoatImg', 'jimBoatImg')
 const jimBoatImg = document.getElementById('jimBoatImg')
 jimBoatImg.src = 'images/jim-boat-deck.jpg'
-
 SuperElement(containerDiv, 'div', '', 'transitionDiv', 'transitionDiv')
 const transitionDiv = document.getElementById('transitionDiv')
-SuperElement(transitionDiv, 'img', '', 'icon', 'mountainIcon')
-const mountainIcon = document.getElementById('mountainIcon')
-mountainIcon.src = 'images/landscape_FILL0_wght400_GRAD0_opsz48.png'
-SuperElement(transitionDiv, 'h4', 'Ph.D. 1980 Biology, Ecology, & Mammalogy University of Colorado', 'transitionTxt', 'phdTxt')
-SuperElement(transitionDiv, 'img', '', 'icon', 'leafIcon')
-const leafIcon = document.getElementById('leafIcon')
-leafIcon.src = 'images/eco_FILL0_wght400_GRAD0_opsz48.png'
-SuperElement(transitionDiv, 'h4', 'M.S. 1970 Botany & Ecology University of Wyoming', 'transitionTxt', 'mastersTxt')
-SuperElement(transitionDiv, 'h4', "Currently Jim is President of A Naturalist's World, an ecological education company.", 'transitionTxt', 'naturalistTxt')
 
+SuperElement(transitionDiv, 'div', '', 'iconTxtDiv', 'iconTxtDiv1')
+const iconTxtDiv1 = document.getElementById('iconTxtDiv1')
+
+SuperElement(iconTxtDiv1, 'span', 'landscape', 'material-symbols-outlined', 'mountainIcon' )
+SuperElement(iconTxtDiv1, 'h4', 'Ph.D. 1980 Biology, Ecology, & Mammalogy University of Colorado', 'transitionTxt', 'phdTxt')
+
+SuperElement(transitionDiv, 'div', '', 'iconTxtDiv', 'iconTxtDiv2')
+const iconTxtDiv2 = document.getElementById('iconTxtDiv2')
+SuperElement(iconTxtDiv2, 'span', 'eco', 'material-symbols-outlined', 'leafIcon')
+SuperElement(iconTxtDiv2, 'h4', 'M.S. 1970 Botany & Ecology University of Wyoming', 'transitionTxt', 'mastersTxt')
+
+SuperElement(transitionDiv, 'div', '', 'iconTxtDiv', 'iconTxtDiv3')
+const iconTxtDiv3 = document.getElementById('iconTxtDiv3')
+SuperElement(iconTxtDiv3, 'span', 'pets', 'material-symbols-outlined', 'pawIcon')
+SuperElement(iconTxtDiv3, 'h4', "President of A Naturalist's World, an ecological education company.", 'transitionTxt', 'naturalistTxt')
 SuperElement(containerDiv, 'div', '', 'naturalistWrldDiv', 'naturalistWrldDiv' )
+
 const naturalistWrldDiv = document.getElementById('naturalistWrldDiv')
-SuperElement(naturalistWrldDiv, 'h1', "A Naturalist's World", 'headerTxt', '')
+SuperElement(naturalistWrldDiv, 'h1', "A Naturalist's World", 'titleTxt', 'aNWHeaderTxt')
 const naturalistWrldDescTxt = `Thank you for visiting our field class listing and product information site. A Naturalist's World is dedicated to providing educational programs and materials about natural history and ecology.Classes include tracking, carnivore ecology, wildlife observation, rare species, northern lights, and alpine and winter ecology. Instructional programs vary from 1 day to 2 weeks. Programs provided at locations across North America. Special Events and Offerings are listed below.For other materials and to register for classes go to the top of this page, select a topic, and visit the new page to view offerings.A Naturalist's World is permitted operator in Yellowstone National Park Authorized Permittee of the Yellowstone National Park`
 SuperElement(naturalistWrldDiv, 'p', naturalistWrldDescTxt, 'naturalistWrldDescTxt', 'naturalistWrldDescTxt')
-
-
-
 SuperElement(containerDiv, 'div', '', 'headerDiv', 'bookHeaderDiv')
 const bookHeaderDiv = document.getElementById('bookHeaderDiv')
-// SuperElement(bookHeaderDiv, 'img', '', 'icon', 'pawIcon')
-// const pawIcon = document.getElementById('pawIcon')
-// pawIcon.src = 'images/pets_FILL0_wght400_GRAD0_opsz48.png'
 SuperElement(bookHeaderDiv, 'h2', 'Books', 'headerTxt', 'booksHeader')
-
 SuperElement(containerDiv, 'div', '', 'bookDiv', 'bookDiv')
 const bookDiv = document.getElementById('bookDiv')
-
 const renderBookCards = () => {
     
   books.forEach(book => {
@@ -147,5 +136,23 @@ const renderBookCards = () => {
 }
 renderBookCards()
 
+SuperElement(containerDiv, 'div', '', 'footerDiv', 'footerDiv')
+const footerDiv = document.getElementById('footerDiv')
+SuperElement(footerDiv, 'div', '', 'contactDiv', 'contactDiv')
+const contactDiv = document.getElementById('contactDiv')
+SuperElement(contactDiv, 'p', `James Halfpenny, Ph.D.`, 'txt', 'footerTxt')
+const email = `trackdoctor@tracknature.com.`
+const stAddress = `9 Jardine Rd.<br> Gardiner, MT 59030`
+const mailAddress = `PO Box 989,<br> Gardiner, MT 59030`
+SuperElement(contactDiv, 'button', email, 'emailBtn', 'emailBtn')
+const emailBtn = document.getElementById('emailBtn')
+emailBtn.addEventListener('click', () => {
+    window.open(`mailto:${email}`);
+})
+SuperElement(contactDiv, 'p', `A Naturalist's World`, 'txt', 'footerTxt')
+SuperElement(contactDiv, 'p', mailAddress, 'mailAddress', 'mailAddress')
+
+const locationLink = `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2819.5847722006697!2d-110.70640732333031!3d45.033353971070234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x534fd0e08713ecf7%3A0x5723ae3c6e18ad06!2s9%20Jardine%20Rd%2C%20Gardiner%2C%20MT%2059030!5e0!3m2!1sen!2sus!4v1686431265409!5m2!1sen!2sus" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`
+SuperElement(footerDiv, 'div', locationLink, 'locationDiv', 'locationDiv')
 
 
