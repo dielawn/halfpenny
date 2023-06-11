@@ -6,9 +6,18 @@
 :root{
   --green: #2bb64e;
   --blue: #287bb3;
-  --backgroundColor1: rgba(13, 114, 13, 0.6);
-  --backgroundColor: #287bb3be;
+  --backgroundColor2: rgba(13, 114, 13, 0.6);
+  --backgroundColor1: #287bb3be;
+  --backgroundColor: rgba(28, 88, 28, 0.432);
   --font: 'Assistant', sans-serif;
+}
+a:link{
+    color: black;
+    text-decoration: none;
+}
+
+a:visited{
+  color: black; 
 }
 h1,h2,h3,h4{
     font-weight: 100;
@@ -28,20 +37,25 @@ h1,h2,h3,h4{
     align-items: center;
     height: 75px;
     padding: 25px;
-    background-color: var();
+    background-color: var(--backgroundColor);
 }
 .navTitle{
-    
+    color: white;
     position: absolute;
     left: 75px;
 }
 #pawIcon{
    
 }
+.navLinksDiv{
+    background-color: #287bb3;
+    
+}
 .navLinks {
     padding: 10px;
     font-size: 1.5em;
     cursor: pointer;
+    color: white;
 }
 .navLinks:hover{
     text-decoration: underline;
@@ -57,10 +71,10 @@ width: 100%;
 }
 .transitionDiv{
     margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+    padding: 10px;
+    width: 100%;   
     display: flex;
+    align-content: center;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -103,13 +117,16 @@ width: 100%;
     margin: 10px;
     padding: 20px;
 }
-.naturalistWrldDiv{
+.bioDiv{
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
+    height: fit-content;
+    padding: 15px;
 }
-.naturalistWrldDescTxt{
+.bioTxt{
+    padding-top: 75px;
     width: 800px;
     align-content: center;
 }
@@ -124,24 +141,21 @@ width: 100%;
   padding: 15px;
   font-size: 2.5rem;
 }
-#locationIcon,
-#mapIcon,
-#treesIcon {
-    color: black;
-}
+
 .footerDiv {
     width: 100%;
     display: flex;
     justify-content: space-around;
     padding: 20px;
     margin: 10px;
+    background-color: var(--backgroundColor);
 }
 .contactDiv {
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 160px;
+    height: 200px;
 }
 .emailBtn{
     outline: none;
@@ -151,6 +165,14 @@ width: 100%;
     display: flex;
     align-content: center;
     align-items: center;
+    justify-content: center;
+    width: 200px;
+    cursor: pointer;
+}
+.titleTxt{
+    position: absolute;
+    left: 4%;
+    
 }
 @media screen and (max-width: 800px) {
     .navDiv {
@@ -170,15 +192,15 @@ width: 100%;
         flex-wrap: wrap;
     }
     .headerTxt{
-        position: relative;
-        left: 60%;
+       
     }
-    #aNWHeaderTxt{
-        position: relative;
-        left: 10%;
-    }
+  
     .footerDiv {
         flex-direction: column;
     }
-   
+   .bioTxt{    
+    width: 400px;    
+    }
+    
+
 }

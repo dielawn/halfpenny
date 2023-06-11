@@ -1,5 +1,10 @@
 const bio = `Jim is an author, scientist, educator whose interest in COLD (altitudinal, latitudinal, and seasonal) has taken him to all seven continents and Greenland. Jim's specialities include environmental ecology, animal tracking, and carnivores; his greatest academic love, bears, led to 20 years studying black, grizzly and polar bears. He also works with wolverine, lynx, cougar and wolves. Jim has written over 25 books and videos including his latest, Yellowstone Bears in the Wild and Track Plates for Mammals. He led the American East Greenland expeditions in 1975 and 1976 and is a Fellow of the Explorer's Club and received the Antarctic Service medal. Jim is past Chairman of the Board of Directors, senior instructor, and administrative liason officer of the National Outdoor Leadership School. Jim is President of A Naturalist's World, an ecological education company. A past Research Fellow of the Institute of Arctic and Alpine Research, Jim was Director of the Mountain Research Station and the Long-Term Ecological Research program in the Alpine. He is listed in Who's Who in the World 1989-1993, Who's Who in Emerging Leaders 1989-1996, Who's Who in Western America 1987-1997 and Who's Who In Science. A Vietnam veteran, Jim received the Navy Achievement Medal with Combat "V" and Vietnamese Gallantry Cross with Palm. Jim received his Ph.D. in 1980 in Biology, Ecology, & Mammalogy from the University of Colorado. His B.S. in 1969 and M.S. in 1970 both in Botany & Ecology from the University of Wyoming. At the University of Wyoming, Jim was on the President's Academic Honor Roll, University of Wyoming and a four-year letterman in diving, swimming and water polo.`
-
+const aiBio = `Jim is a remarkable individual, a scientist, educator, and author with a profound fascination for the intriguing aspects of cold environments. His insatiable curiosity has led him to explore all seven continents, including Greenland, in his pursuit of understanding altitudinal, latitudinal, and seasonal variations. With a focus on environmental ecology, animal tracking, and carnivores, Jim has dedicated over two decades of his academic career to studying black, grizzly, and polar bears, nurturing a deep affection for these majestic creatures.<br><br>
+Not limited to bears alone, Jim's expertise extends to other captivating species such as wolverines, lynxes, cougars, and wolves. His contributions to the field of wildlife research are evident in the extensive collection of over 25 books and videos he has authored, including his latest works, "Yellowstone Bears in the Wild" and "Track Plates for Mammals."<br><br>
+In addition to his scientific pursuits, Jim has played instrumental roles in various expeditions and organizations. He led the American East Greenland expeditions in 1975 and 1976, receiving recognition as a Fellow of the Explorer's Club and the Antarctic Service Medal. As a past Chairman of the Board of Directors, senior instructor, and administrative liaison officer of the National Outdoor Leadership School, Jim has actively shaped and influenced the next generation of outdoor enthusiasts.<br><br>
+Jim's commitment to ecological education led him to establish A Naturalist's World, a company dedicated to fostering environmental awareness. He served as a Research Fellow of the Institute of Arctic and Alpine Research and held positions as Director of the Mountain Research Station and the Long-Term Ecological Research program in the Alpine. His accomplishments have earned him listings in prominent publications such as Who's Who in the World 1989-1993, Who's Who in Emerging Leaders 1989-1996, Who's Who in Western America 1987-1997, and Who's Who In Science.<br><br>
+As a Vietnam veteran, Jim's contributions extended beyond the realm of academia. He was honored with the Navy Achievement Medal with Combat "V" and Vietnamese Gallantry Cross with Palm for his service. Jim's educational journey culminated in the attainment of a Ph.D. in Biology, Ecology, & Mammalogy from the University of Colorado in 1980, building upon his earlier academic achievements—a B.S. in 1969 and M.S. in 1970 in Botany & Ecology from the University of Wyoming. Throughout his time at the University of Wyoming, Jim showcased his academic prowess, earning a place on the President's Academic Honor Roll and distinguishing himself as a four-year letterman in diving, swimming, and water polo.
+With his extensive expertise and unwavering passion for the natural world, Jim remains a prominent figure in the scientific and educational communities, leaving an indelible impact on the North Range of Yellowstone National Park and beyond.<br>`
 const books = [
     {
         title: "A Fied Guide to Mammal Tracking in North America",
@@ -73,7 +78,9 @@ SuperElement(containerDiv, 'div', '', 'navDiv', 'navDiv')
 const navDiv = document.getElementById('navDiv')
 SuperElement(navDiv, 'span', 'forest', 'material-symbols-outlined', 'treesIcon')
 SuperElement(navDiv, 'h1', 'Jim Halfpenny', 'navTitle', 'navTitle')
-const navLinks = [ 'Home', 'Education', 'About']
+SuperElement(navDiv, 'div', '', 'linksDiv', 'linksDiv')
+const navLinksDiv = document.getElementById('linksDiv')
+const navLinks = [ 'Home', 'Resume', 'Gallery']
 const createLinks = (array) => {
     array.map(item => {
         return new SuperElement(navDiv, 'h3', item, 'navLinks', item +'Link')
@@ -103,12 +110,12 @@ SuperElement(transitionDiv, 'div', '', 'iconTxtDiv', 'iconTxtDiv3')
 const iconTxtDiv3 = document.getElementById('iconTxtDiv3')
 SuperElement(iconTxtDiv3, 'span', 'pets', 'material-symbols-outlined', 'pawIcon')
 SuperElement(iconTxtDiv3, 'h4', "President of A Naturalist's World, an ecological education company.", 'transitionTxt', 'naturalistTxt')
-SuperElement(containerDiv, 'div', '', 'naturalistWrldDiv', 'naturalistWrldDiv' )
+SuperElement(containerDiv, 'div', '', 'bioDiv', 'bioDiv' )
 
-const naturalistWrldDiv = document.getElementById('naturalistWrldDiv')
-SuperElement(naturalistWrldDiv, 'h1', "A Naturalist's World", 'titleTxt', 'aNWHeaderTxt')
+const bioDiv = document.getElementById('bioDiv')
+// SuperElement(bioDiv, 'h2', "Bio", 'titleTxt', 'bioHeader')
 const naturalistWrldDescTxt = `Thank you for visiting our field class listing and product information site. A Naturalist's World is dedicated to providing educational programs and materials about natural history and ecology.Classes include tracking, carnivore ecology, wildlife observation, rare species, northern lights, and alpine and winter ecology. Instructional programs vary from 1 day to 2 weeks. Programs provided at locations across North America. Special Events and Offerings are listed below.For other materials and to register for classes go to the top of this page, select a topic, and visit the new page to view offerings.A Naturalist's World is permitted operator in Yellowstone National Park Authorized Permittee of the Yellowstone National Park`
-SuperElement(naturalistWrldDiv, 'p', naturalistWrldDescTxt, 'naturalistWrldDescTxt', 'naturalistWrldDescTxt')
+SuperElement(bioDiv, 'p', aiBio, 'bioTxt', 'bioTxt')
 SuperElement(containerDiv, 'div', '', 'headerDiv', 'bookHeaderDiv')
 const bookHeaderDiv = document.getElementById('bookHeaderDiv')
 SuperElement(bookHeaderDiv, 'h2', 'Books', 'headerTxt', 'booksHeader')
@@ -141,7 +148,18 @@ const footerDiv = document.getElementById('footerDiv')
 SuperElement(footerDiv, 'div', '', 'contactDiv', 'contactDiv')
 const contactDiv = document.getElementById('contactDiv')
 SuperElement(contactDiv, 'p', `James Halfpenny, Ph.D.`, 'txt', 'footerTxt')
-const email = `trackdoctor@tracknature.com.`
+
+const phoneNum = '4068489458'
+let displayedNumber = 
+phoneNum.slice(0, 3) + '-' + 
+phoneNum.slice(3, 6) + '-' + 
+phoneNum.slice(6)
+
+SuperElement(contactDiv, 'a', displayedNumber, 'phoneElem', 'phoneElem')
+const phoneLink = document.getElementById('phoneElem')
+phoneLink.href = `tel:${phoneNum}`
+
+const email = `trackdoctor@tracknature.com`
 const stAddress = `9 Jardine Rd.<br> Gardiner, MT 59030`
 const mailAddress = `PO Box 989,<br> Gardiner, MT 59030`
 SuperElement(contactDiv, 'button', email, 'emailBtn', 'emailBtn')
