@@ -121,8 +121,7 @@ const bookHeaderDiv = document.getElementById('bookHeaderDiv')
 SuperElement(bookHeaderDiv, 'h2', 'Books', 'headerTxt', 'booksHeader')
 SuperElement(containerDiv, 'div', '', 'bookDiv', 'bookDiv')
 const bookDiv = document.getElementById('bookDiv')
-const renderBookCards = () => {
-    
+const renderBookCards = () => {    
   books.forEach(book => {
         SuperElement(bookDiv, 'div', '', 'bookCard', `${book.id}Card`)
         const cardId = book.id+'Card'
@@ -142,6 +141,25 @@ const renderBookCards = () => {
    })
 }
 renderBookCards()
+
+SuperElement(containerDiv, 'div', ``, 'natWrldDiv', 'natWrldDiv')
+const natWrldDiv = document.getElementById('natWrldDiv')
+SuperElement(natWrldDiv, 'p', `A Naturalist World`, 'natWrldTxt', 'natWrldTxt')
+
+const natWrldDesc = `Enhance your knowledge and skills of the natural arena!<br>
+With an academic, field-experience mentored by Dr. Jim Halfpenny<br><br>
+<em>Animal tracking<br><br>
+Cold weather ecology<br><br>
+General natural history<br><br>
+Mammal ecology and behavior</em><br><br>
+To learn more or register for a Residency, `
+
+SuperElement(natWrldDiv, 'div', natWrldDesc, 'ntWrldDesc', 'ntWrldDesc')
+const ntWrldDesc = document.getElementById('ntWrldDesc')
+const natLinkElement = SuperElement(ntWrldDesc, 'a', 'Click Here', 'ntrWrldLink', 'ntrWrldLink')
+
+const ntrWrldLink = document.getElementById('ntrWrldLink')
+ntrWrldLink.href = 'https://www.tracknature.com/x/home.php#appSection'
 
 SuperElement(containerDiv, 'div', '', 'footerDiv', 'footerDiv')
 const footerDiv = document.getElementById('footerDiv')
