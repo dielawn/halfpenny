@@ -189,8 +189,12 @@ width: 100%;
     padding: 20px;
 }
 #ntrWrldLink {
+    background-color: #2bb64e;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 20px;
     color: white;
-    text-decoration: underline;
+    
 }
 .natWrldTxt{
     font-size: 1.8rem;
