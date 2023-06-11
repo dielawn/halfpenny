@@ -144,7 +144,8 @@ renderBookCards()
 
 SuperElement(containerDiv, 'div', ``, 'natWrldDiv', 'natWrldDiv')
 const natWrldDiv = document.getElementById('natWrldDiv')
-SuperElement(natWrldDiv, 'p', `A Naturalist World`, 'natWrldTxt', 'natWrldTxt')
+
+SuperElement(natWrldDiv, 'p', `A<br> Naturalist<br> World`, 'natWrldTxt', 'natWrldTxt')
 
 const natWrldDesc = `Enhance your knowledge and skills of the natural arena!<br>
 With an academic, field-experience mentored by Dr. Jim Halfpenny<br><br>
