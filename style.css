@@ -228,6 +228,8 @@ width: 100%;
    .bioTxt{    
     width: 350px;    
     }
-    
+    .ntrWrldLink {
+        position: absolute;
+    }
 
 }
